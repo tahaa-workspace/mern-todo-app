@@ -14,20 +14,20 @@ function App() {
       title,
       completed: false
     };
-
-    const toggleTodo = (id) => {
-      setTodos(
-        todos.map((todo) => todo._id === id ? { ...todo, completed: !todo.completed } : todo)
-      );
-    };
-
-    const deleteTodo = (id) => {
-      setTodos(todos.filter((todo) => todo._id !== id));
-    };
-
-
     setTodos([newTodo, ...todos]);
   };
+
+
+  const toggleTodo = (id) => {
+    setTodos(
+      todos.map((todo) => todo._id === id ? { ...todo, completed: !todo.completed } : todo)
+    );
+  };
+
+  const deleteTodo = (id) => {
+    setTodos(todos.filter((todo) => todo._id !== id));
+  };
+
 
   return (
     <div>
@@ -47,7 +47,7 @@ function App() {
           )}
         </ul>
       )
-      };
+      }
     </div>
   );
 }
