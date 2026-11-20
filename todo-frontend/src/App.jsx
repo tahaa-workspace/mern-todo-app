@@ -2,7 +2,8 @@ import { useState, useEffect } from 'react';
 import TodoForm from './components/TodoForm';
 import TodoItem from './components/TodoItem';
 
-const API_URL = 'http://localhost:5000/api/todos';
+// const API_URL = 'http://localhost:5000/api/todos';
+const API_URL = 'http://localhost:8000/api/todos';
 
 function App() {
   const [todos, setTodos] = useState([]);
@@ -15,10 +16,12 @@ function App() {
       try {
         setError(null);
         const response = await fetch(API_URL);
+        // console.log(`response = ${response}`);
         if (!response.ok) {
           throw new Error('Failed to fetch tasks from server');
         }
         const data = await response.json();
+        // console.log(`data = ${data}`);
         setTodos(data);
       } catch (err) {
         setError(err.message);
