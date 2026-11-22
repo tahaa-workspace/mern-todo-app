@@ -9,3 +9,8 @@ class Task(BaseModel):
     # is_deleted: bool=False
     # updated_at: int = int(datetime.timestamp(datetime.now()))
     # creation: int = int(datetime.timestamp(datetime.now()))
+    
+class UserAuth(BaseModel):
+    name: Optional[str]= None
+    email: str
+    password: str
