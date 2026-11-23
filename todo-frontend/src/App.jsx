@@ -2,8 +2,8 @@ import { useState, useEffect } from 'react';
 import TodoForm from './components/TodoForm';
 import TodoItem from './components/TodoItem';
 
-// const API_URL = 'http://localhost:5000/api/todos';
-const API_URL = 'http://localhost:8000/api/todos';
+const API_URL = 'http://localhost:5000/api/todos';
+// const API_URL = 'http://localhost:8000/api/todos';
 
 function App() {
   const [todos, setTodos] = useState([]);
